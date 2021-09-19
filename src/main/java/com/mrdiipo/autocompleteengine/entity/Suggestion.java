@@ -3,6 +3,7 @@ package com.mrdiipo.autocompleteengine.entity;
 import lombok.*;
 
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString(onlyExplicitlyIncluded = true)
