@@ -6,6 +6,7 @@ import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.List;
 
+// Breaks the entered strings into fragments
 public class Fragmenter {
 
     public static List<String> getFragments(Suggestion s){
