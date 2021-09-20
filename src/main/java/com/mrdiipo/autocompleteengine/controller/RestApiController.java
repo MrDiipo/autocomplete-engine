@@ -40,8 +40,6 @@ public class RestApiController {
 
     Set<Suggestion> results = rapidSuggestService.getSuggestions(n, groups, query);
         return new ResponseEntity(results, HttpStatus.OK);
-
-
     }
 
 }

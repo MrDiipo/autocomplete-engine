@@ -22,14 +22,15 @@ public class RapidSuggestService {
 
         Map<String, AutoCompleteEngine> engines = dataIngestionService.getEngines();
 
-        String[] groupsArray = groups.split(",")
+        String[] groupsArray = groups.split(",");
 
-        for(String g : groupsArray){
+        for(String g : groupsArray) {
             AutoCompleteEngine autoCompleteEngine = engines.get(g);
-            if (autoCompleteEngine != null){
-                Set<Suggestion> results = autoCompleteEngine.autocomplete(query, n/groups.length());
+            if (autoCompleteEngine != null) {
+                Set<Suggestion> results = autoCompleteEngine.autocomplete(query, n / groups.length());
+                suggestions.addAll(results);
             }
-            return suggestions;
         }
+            return suggestions;
     }
 }

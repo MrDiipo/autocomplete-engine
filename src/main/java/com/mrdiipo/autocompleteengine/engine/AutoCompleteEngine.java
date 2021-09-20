@@ -22,10 +22,10 @@ public class AutoCompleteEngine {
     };
 
     public void add(Suggestion s){
-        List<String> fragments = Fragmenter.get(s);
+        List<String> fragments = Fragmenter.getFragments(s);
         List<AutoCompleteFragment> someFragments = new ArrayList<>();
         for(String f : fragments){
-            someFragments.add(new AutoCompleteFragment())
+            someFragments.add(new AutoCompleteFragment());
         }
         treeSet.addAll(someFragments);
     }
