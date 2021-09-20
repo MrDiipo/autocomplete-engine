@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.List;
 
 @org.springframework.web.bind.annotation.RestController
-public class RestController {
+public class RestApiController {
 
     @Autowired
     private DataIngestionService dataIngestionService;

@@ -2,10 +2,7 @@ package com.mrdiipo.autocompleteengine.engine;
 
 import com.mrdiipo.autocompleteengine.entity.Suggestion;
 
-import java.util.Comparator;
-import java.util.Set;
-import java.util.SortedSet;
-import java.util.TreeSet;
+import java.util.*;
 
 // Returns set of suggestions
 public class AutoCompleteEngine {
@@ -23,6 +20,15 @@ public class AutoCompleteEngine {
             }
         }
     };
+
+    public void add(Suggestion s){
+        List<String> fragments = Fragmenter.get(s);
+        List<AutoCompleteFragment> someFragments = new ArrayList<>();
+        for(String f : fragments){
+            someFragments.add(new AutoCompleteFragment())
+        }
+        treeSet.addAll(someFragments);
+    }
 
     public Set<Suggestion> autocomplete(String query, int limit){
 
