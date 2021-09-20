@@ -2,6 +2,7 @@ package com.mrdiipo.autocompleteengine.service;
 
 import com.mrdiipo.autocompleteengine.engine.AutoCompleteEngine;
 import com.mrdiipo.autocompleteengine.entity.Suggestion;
+import lombok.Data;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -9,6 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 @Service
+@Data
 public class DataIngestionService {
 
     Map<String, AutoCompleteEngine> engines = new HashMap<>();
