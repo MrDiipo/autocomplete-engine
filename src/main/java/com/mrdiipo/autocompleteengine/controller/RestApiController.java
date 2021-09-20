@@ -31,8 +31,7 @@ public class RestApiController {
 
     }
 
-    @GetMapping(value = "/rapidsuggest", consumes = MediaType.APPLICATION_JSON_VALUE,
-    produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/rapidsuggest", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity autocomplete(@RequestParam("q") String query,
         @RequestParam(name = "n", defaultValue = "10") int n,
     @RequestParam(name = "g", defaultValue = "movies, people") String groups){
