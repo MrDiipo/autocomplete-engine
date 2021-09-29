@@ -8,7 +8,6 @@ public class JspController {
 
     @GetMapping("/")
     public String index(){
-
         return "index";
     }
 }
